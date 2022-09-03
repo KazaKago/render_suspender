@@ -1,7 +1,7 @@
 # Render Auto Suspender
 
-Suspend the specified service on [render.com](https://render.com/).
-Running it in a cron job prevents the cost of the development server from forgetting to suspend.
+Suspend the specified service on [render.com](https://render.com/).  
+Running it in a cron job prevents the cost of the development server from forgetting to suspend.  
 
 ## Setup on Render.com
 
@@ -20,6 +20,11 @@ Running it in a cron job prevents the cost of the development server from forget
 4. Input Environment Variables.
 
 - `RENDER_SERVICE_IDS`: Render service IDs you want to suspend. You can enter multiple entries separated by commas.
-- `RENDRE_TOKEN`: Your Render access token.
+- `RENDRE_TOKEN`: Your [Render access token](https://render.com/docs/api#creating-an-api-key).
 
 ![](artworks/screenshot%202022-09-04%202.33.46.png)
+
+## Warning
+
+Currently (2022/09) Render API does NOT support database suspend and resume.  
+Please note that you need to switch manually.  
