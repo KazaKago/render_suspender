@@ -9,7 +9,7 @@ import org.json.JSONObject
 fun main(args: Array<String>) {
     val conf = ConfigFactory.load()
     val accessToken = conf.getString("render.token")
-    val serviceIds = conf.getStringList("render.service.ids")
+    val serviceIds = conf.getString("render.service.ids").filterNot { it.isWhitespace() }.split(",")
     serviceIds.forEach { if (!isSuspend(accessToken, it)) suspend(accessToken, it) }
 }
 
