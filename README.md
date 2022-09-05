@@ -13,7 +13,7 @@ Running it in a cron job prevents the cost of the development server from forget
 
 ![](artworks/screenshot%202022-09-04%202.01.16.png)
 
-3. Set cron job, For example `0 0 * * *`.
+3. Set cron job, For example `0 0 * * *` (Daily at 12:00 AM UTC).
 
 ![](artworks/screenshot%202022-09-04%202.07.27.png)
 
