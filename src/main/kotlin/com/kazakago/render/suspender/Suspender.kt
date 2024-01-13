@@ -6,7 +6,7 @@ import okhttp3.Request
 import okhttp3.internal.EMPTY_REQUEST
 import org.json.JSONObject
 
-fun main(args: Array<String>) {
+fun main() {
     val conf = ConfigFactory.load()
     val accessToken = conf.getString("render.token")
     val serviceIds = conf.getString("render.service.ids").filterNot { it.isWhitespace() }.split(",")

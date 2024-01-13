@@ -2,7 +2,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
     application
-    kotlin("jvm") version "1.7.10"
+    kotlin("jvm") version "1.9.22"
 }
 
 group = "com.kazakago.render.suspender"
@@ -12,17 +12,12 @@ application {
     mainClass.set("com.kazakago.render.suspender.SuspenderKt")
 }
 
-java {
-    sourceCompatibility = JavaVersion.VERSION_11
-    targetCompatibility = JavaVersion.VERSION_11
-}
-
-tasks.withType<KotlinCompile> {
-    kotlinOptions.jvmTarget = "11"
+kotlin {
+    jvmToolchain(21)
 }
 
 dependencies {
-    implementation("com.typesafe:config:1.4.2")
-    implementation("com.squareup.okhttp3:okhttp:4.10.0")
-    implementation("org.json:json:20220320")
+    implementation("com.typesafe:config:1.4.3")
+    implementation("com.squareup.okhttp3:okhttp:4.12.0")
+    implementation("org.json:json:20231013")
 }
